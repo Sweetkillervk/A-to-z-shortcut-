@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("studentEmail").value.trim();
     const learnerCode = document.getElementById("learnerCode").value.trim();
 
+    // Check if all fields are filled
     if (!name || !email || !learnerCode) {
       alert("Please fill in all fields!");
       return;
@@ -31,14 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // Save active user
+      // Save active user to localStorage
       localStorage.setItem("activeUser", email);
 
       alert("Login successful!");
       document.getElementById("loginForm").style.display = "none";
       document.getElementById("quizSection").style.display = "block";
     } else {
-      alert("Invalid email or learner code!");
+      alert("Invalid email or PIN!"); // Display error if email or PIN is wrong
     }
   });
 
