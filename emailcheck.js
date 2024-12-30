@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       // If invalid, show error and keep login form visible
       alert("Invalid email or learner code! Please try again.");
-      // Reset input fields
+      // Reset input fields to prevent multiple failed attempts
       document.getElementById("studentEmail").value = '';
       document.getElementById("learnerCode").value = '';
     }
